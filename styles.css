@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #91d1e9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filters {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#filters label {
+    font-weight: bold;
+}
+
+#filters select, #filters input[type="range"], #filters button {
+    margin: 8px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+#filters select {
+    width: 100%;
+}
+
+#filters button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filters button:hover {
+    background-color: #45a049;
+}
+
+#jobListings {
+    display: grid;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.jobCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jobCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.jobCard h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.jobCard p, .jobCard span {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.jobCard .technologies {
+    font-style: italic;
+    color: #666;
+}
+
+.jobCard .details {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobCard .details span {
+    flex: 1;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    #filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #filters select, #filters input[type="range"], #filters button {
+        width: calc(50% - 16px);
+    }
+
+    #jobListings {
+        grid-template-columns: 1fr;
+    }
+}

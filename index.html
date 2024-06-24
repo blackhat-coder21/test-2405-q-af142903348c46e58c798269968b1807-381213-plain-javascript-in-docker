@@ -1,14 +1,37 @@
-﻿<!doctype html>
-<html>
-  <head>  
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
-    <script src="env.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="filters">
+        <label for="jobRoleFilter">Job Role:</label>
+        <select id="jobRoleFilter">
+            <option value="">Select Job Role</option>
+        </select>
+
+        <label for="technologyFilter">Technology:</label>
+        <select id="technologyFilter">
+            <option value="">Select Technology</option>
+        </select>
+
+        <label for="experienceFilter">Experience:</label>
+        <select id="experienceFilter">
+            <option value="">Select Experience</option>
+        </select>
+
+        <label for="ctcRange">CTC Range:</label>
+        <input type="range" id="ctcRange" min="0" max="50" value="0">
+        <span id="ctcValue">0 LPA</span>
+
+        <button id="resetFilters">Reset Filters</button>
+    </div>
+
+    <div id="jobListings"></div>
+
     <script src="index.js"></script>
-  </head>
-  <body onload="renderDynamicContent()">
-    <h1>Hello World</h1>
-    <div id="dynamic-content"></div>
-  </body>
+</body>
 </html>
