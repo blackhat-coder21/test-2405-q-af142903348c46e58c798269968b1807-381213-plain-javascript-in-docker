@@ -1,2 +1,3 @@
-var API_URL='http://restapi:8080';
+const API_URL = 'https://codejudge-question-artifacts-dev.s3.amazonaws.com/q-1710/data.json';
+
 
