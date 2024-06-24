@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const ctcValue = document.getElementById('ctcValue');
     const resetFiltersButton = document.getElementById('resetFilters');
 
-
     fetch('https://codejudge-question-artifacts-dev.s3.amazonaws.com/q-1710/data.json')
         .then(response => response.json())
         .then(data => {
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         populateDropdown(technologyFilter, technologies);
         populateDropdown(experienceFilter, experiences);
 
-    
         jobRoleFilter.addEventListener('change', applyFilters);
         technologyFilter.addEventListener('change', applyFilters);
         experienceFilter.addEventListener('change', applyFilters);

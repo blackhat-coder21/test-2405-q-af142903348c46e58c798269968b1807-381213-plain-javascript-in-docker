@@ -1,8 +1,9 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #91d1e9;
+    background-color: #5ec2e6;
 }
 
 .container {
@@ -22,6 +23,9 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 #filters label {
@@ -34,7 +38,7 @@ h1 {
     font-size: 14px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    width: 200px;
+    width: calc(100% - 16px); /* Adjust width */
 }
 
 #filters select {
@@ -55,8 +59,7 @@ h1 {
 #jobListings {
     display: grid;
     gap: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
